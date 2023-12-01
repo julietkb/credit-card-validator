@@ -1,46 +1,30 @@
-# Getting Started with Create React App
+# Credit Card Validator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+TODO: deploy
 
-## Available Scripts
+## Running locally
 
-In the project directory, you can run:
+In a terminal, navigate to the `api` directory and run `npm run start` to start the API server (on port 3001). Then, navigate back to the root directory and run `npm start` to start the client.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Areas of Improvement
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- I was having some issued getting React Hook Form to play nice with number only inputs, and unfortunately it still allows `e`, `+`, and `-` in the input
+  - I tried to make my own `onChange` handler that plugs into the library's `onChange` and replace `e` and other valid-number-input characters like `+` and `-`, but it wasn't working. Ideally, React Hook Form's `register` function would work correctly with a regex pattern that only allows 15 or 16 digits, and I wouldn't have to specify the input `type='number'` or write my own `onChange`.
+- Because of the issues above with React Hook Form, I had to write my own method `invalidFormInput` for enabling/disabling form submit. Ideally I wouldn't have to write this method.
+- Also, because of this, I need to update the validity of the form in local state via watching the React Hook Form field values in a `useEffect` which can hinder performance.
 
-### `npm test`
+## Prompt
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Technical Requirements
+- Use React, node.js and typescript for your application
+- Authentication and DB are not needed
 
-### `npm run build`
+### Functional Requirements
+- The main purpose of this application is to create a webpage to validate a Credit Card number
+- Use the Luhn checksum algorithm for validation
+- Validation should happen in the back-end (API) not the frontend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Minimal UI Requirements
+- At least one text box should be included for credit card input
+- Screen should display if the number is valid or not
