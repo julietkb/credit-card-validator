@@ -9,6 +9,11 @@ A take-home interview assessment for an unnamed company.
 In a terminal, navigate to the `api` directory and run `npm i` to install dependencies & `npm run start` to start the API server (on port 3001). Then, navigate back to the root directory and run `npm i` to install dependencies & `npm start` to start the client.
 
 
+## Notes
+
+I spent time on this 11/26 but couldn't get the node stuff working, so I scrapped and started over 12/1.
+
+
 ## Areas of Improvement
 
 - I was having some issued getting React Hook Form to play nice with number only inputs, and unfortunately it still allows `e`, `+`, and `-` in the input
