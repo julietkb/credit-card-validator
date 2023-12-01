@@ -1,10 +1,12 @@
 # Credit Card Validator
 
+A take-home interview assessment for an unnamed company.
+
 TODO: deploy
 
 ## Running locally
 
-In a terminal, navigate to the `api` directory and run `npm run start` to start the API server (on port 3001). Then, navigate back to the root directory and run `npm start` to start the client.
+In a terminal, navigate to the `api` directory and run `npm i` to install dependencies & `npm run start` to start the API server (on port 3001). Then, navigate back to the root directory and run `npm i` to install dependencies & `npm start` to start the client.
 
 
 ## Areas of Improvement
