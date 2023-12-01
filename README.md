@@ -2,7 +2,7 @@
 
 A take-home interview assessment for an unnamed company.
 
-[https://julietkb.github.io/credit-card-validator/](https://julietkb.github.io/credit-card-validator/)
+~[https://julietkb.github.io/credit-card-validator/](https://julietkb.github.io/credit-card-validator/)~ silly me I can't host node on this :( see instructions on how to run locally thanks!
 
 ## Running locally
 
