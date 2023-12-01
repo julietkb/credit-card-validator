@@ -9,8 +9,20 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const validateCreditCard = (creditCard) => {
-  // TODO: implement validation algorithm
-  return true;
+  if (creditCard.length < 15 || creditCard.length > 16) {
+    return false;
+  }
+
+  const digits = creditCard.split("").map(d => Number(d));
+  for (let i = digits.length - 2; i >= 0; i -= 2) {
+    let double = digits[i] * 2;
+    if (double > 9) {
+      double -= 9;
+    }
+    digits[i] = double;
+  }
+  const sum = digits.reduce((acc, digit) => acc + digit, 0);
+  return sum % 10 === 0;
 };
 
 app.post('/api/validateCreditCard', async (req, res) => {

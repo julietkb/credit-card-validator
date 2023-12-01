@@ -2,7 +2,7 @@
 
 A take-home interview assessment for an unnamed company.
 
-TODO: deploy
+[https://julietkb.github.io/credit-card-validator/](https://julietkb.github.io/credit-card-validator/)
 
 ## Running locally
 
